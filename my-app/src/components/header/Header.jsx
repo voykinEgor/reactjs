@@ -1,13 +1,15 @@
+import styles from './Header.module.scss';
+
 const Header = () => {
     return(
         <div>
-            <header>
+            <header className={styles.header}>
                 <h1>
                     Create App
                 </h1>
                 <p>description</p>
             </header>
-            <nav>
+            <nav className={styles.nav}>
                 <a href="#">One</a>
                 <a href="#">Two</a>
                 <a href="#">Three</a>
