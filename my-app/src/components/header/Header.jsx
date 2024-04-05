@@ -5,7 +5,7 @@ const Header = () => {
         <div>
             <header className={styles.header}>
                 <h1>
-                    Create App
+                    Web application
                 </h1>
                 <p>description</p>
             </header>
