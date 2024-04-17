@@ -1,0 +1,43 @@
+[{
+    "id":1,
+    "tittle": "ТПР",
+    "description": "Теория принятия решений",
+    "hours": 56,
+    "img": "https://cf.ppt-online.org/files/slide/j/JphiRIS3ruMCOlHbLUF2m9Pt4VYoyZq8XNQA65/slide-25.jpg"
+},
+{
+    "id":2,
+    "tittle": "ТБД",
+    "description": "Технологии баз данных",
+    "hours": 865,
+    "img": "https://storage.pravo.ru/image/185/92655.png?v=1659681771"
+},
+{
+    "id":3,
+    "tittle": "МЛТА",
+    "description": "Математическая логика и теория алгоритмов",
+    "hours": 536,
+    "img": "https://avatars.mds.yandex.net/i?id=b11706689cb0fb0187a07fd18ed096c4e479fdab-12260990-images-thumbs&n=13"
+},
+{
+    "id":4,
+    "tittle": "ЧМ",
+    "description": "Численные методы",
+    "hours": 536,
+    "img": "https://avatars.mds.yandex.net/i?id=b11706689cb0fb0187a07fd18ed096c4e479fdab-12260990-images-thumbs&n=13"
+},
+{
+    "id":5,
+    "tittle": "Физкультура",
+    "description": "Плаваниеsd,afnkldasnkfdasdfnsfadnklsdankli;sdflsdfnkl",
+    "hours": 536,
+    "img": "https://avatars.mds.yandex.net/i?id=b11706689cb0fb0187a07fd18ed096c4e479fdab-12260990-images-thumbs&n=13"
+},
+{
+    "id":6,
+    "tittle": "РТПО",
+    "description": "Разработка требований к программному обеспечению",
+    "hours": 536,
+    "img": "https://avatars.mds.yandex.net/i?id=b11706689cb0fb0187a07fd18ed096c4e479fdab-12260990-images-thumbs&n=13"
+}
+]

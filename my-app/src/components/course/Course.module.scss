@@ -1,0 +1,23 @@
+.item{
+    border: 2px solid gray;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    max-width: 300px;
+    max-height: 800px;
+
+    //&__hard методология BAM у всех остальных border grey, у которых hard - red
+    &__hard{
+        border: 2px solid red;
+    }
+}
+.description{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: start;
+}
+.description img{
+    width: 100%;
+}
