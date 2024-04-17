@@ -1,23 +1,23 @@
-.item{
+.item {
     border: 2px solid gray;
     margin: 5px;
     display: flex;
     flex-direction: column;
     padding: 5px;
     max-width: 300px;
-    max-height: 800px;
+    height: 400px;
+    justify-content: space-between;
+    min-width: 350px;
+}
 
-    //&__hard методология BAM у всех остальных border grey, у которых hard - red
-    &__hard{
-        border: 2px solid red;
-    }
+.item img {
+    max-width: 100%;
+    max-height: 150px;
+    object-fit: contain; 
 }
-.description{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: start;
+.item p{
+    word-wrap: break-word;
 }
-.description img{
-    width: 100%;
+.item__hard {
+    border: 2px solid red;
 }
