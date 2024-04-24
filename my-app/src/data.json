@@ -3,41 +3,47 @@
     "tittle": "ТПР",
     "description": "Теория принятия решений",
     "hours": 56,
-    "img": "https://cf.ppt-online.org/files/slide/j/JphiRIS3ruMCOlHbLUF2m9Pt4VYoyZq8XNQA65/slide-25.jpg"
+    "img": "https://cf.ppt-online.org/files/slide/j/JphiRIS3ruMCOlHbLUF2m9Pt4VYoyZq8XNQA65/slide-25.jpg",
+    "liked": false
 },
 {
     "id":2,
     "tittle": "ТБД",
     "description": "Технологии баз данных",
     "hours": 865,
-    "img": "https://storage.pravo.ru/image/185/92655.png?v=1659681771"
+    "img": "https://storage.pravo.ru/image/185/92655.png?v=1659681771",
+    "liked": false
 },
 {
     "id":3,
     "tittle": "МЛТА",
     "description": "Математическая логика и теория алгоритмов",
     "hours": 536,
-    "img": "https://avatars.mds.yandex.net/i?id=b11706689cb0fb0187a07fd18ed096c4e479fdab-12260990-images-thumbs&n=13"
+    "img": "https://avatars.mds.yandex.net/i?id=b11706689cb0fb0187a07fd18ed096c4e479fdab-12260990-images-thumbs&n=13",
+    "liked": false
 },
 {
     "id":4,
     "tittle": "ЧМ",
     "description": "Численные методы",
     "hours": 536,
-    "img": "https://azazira.xyz/DATAIM/images/user_avatar_images/51/c9c8168acf8d.png"
+    "img": "https://azazira.xyz/DATAIM/images/user_avatar_images/51/c9c8168acf8d.png",
+    "liked": false
 },
 {
     "id":5,
     "tittle": "Физкультура",
     "description": "Плавание",
     "hours": 536,
-    "img": "https://www.school619.ru/assets/images/news/2021_10/logo_.png"
+    "img": "https://www.school619.ru/assets/images/news/2021_10/logo_.png",
+    "liked": false
 },
 {
     "id":6,
     "tittle": "РТПО",
     "description": "Разработка требований к программному обеспечению",
     "hours": 536,
-    "img": "https://avatars.mds.yandex.net/i?id=90d08e82193c3187524cfd3719e4345061dbb635-12434137-images-thumbs&n=13"
+    "img": "https://avatars.mds.yandex.net/i?id=90d08e82193c3187524cfd3719e4345061dbb635-12434137-images-thumbs&n=13",
+    "liked": false
 }
 ]
