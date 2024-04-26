@@ -40,7 +40,7 @@ const CourseList = () => {
                 )}
             </div>
                     {visibleCount < courses.length && (
-                        <button onClick={handleVisible}>More {visibleCount}</button>
+                        <button className={styles.buttonmore} onClick={handleVisible}>More {visibleCount}</button>
                     )}
         </div>
         

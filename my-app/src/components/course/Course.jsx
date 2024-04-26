@@ -12,8 +12,10 @@ const Course = (props) =>{
     const hendleDelete = (id) => {
         deleteCourse(id);
     }
+
+    let liked_style = visibleLike ? styles.liked: styles.item;
     return (
-        <div className={styles.item}>
+        <div className={liked_style}>
             <h3>{course.tittle}</h3>
                 <img src={course.img}></img>
                 <p>Description: {course.description}</p>
