@@ -13,9 +13,9 @@ const Course = (props) =>{
         deleteCourse(id);
     }
 
-    let liked_style = visibleLike ? styles.liked: styles.item;
+    // let liked_style = visibleLike ? styles.liked: styles.item;
     return (
-        <div className={liked_style}>
+        <div className={`${styles.item} ${visibleLike ? styles.liked:''}`}>
             <h3>{course.tittle}</h3>
                 <img src={course.img}></img>
                 <p>Description: {course.description}</p>

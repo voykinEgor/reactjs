@@ -8,40 +8,20 @@
     height: 400px;
     justify-content: space-between;
     min-width: 350px;
-}
-
-.item img {
-    max-width: 100%;
+    & img {
+        max-width: 100%;
     max-height: 150px;
     object-fit: contain; 
+    }
+    & p{
+         word-wrap: break-word;
+    }
+    &__hard {
+         border: 2px solid red;
+    }
 }
-.item p{
-    word-wrap: break-word;
-}
-.item__hard {
-    border: 2px solid red;
-}
+
+
 .liked{
-    border: 2px solid gray;
     background-color: pink;
-    margin: 5px;
-    display: flex;
-    flex-direction: column;
-    padding: 5px;
-    max-width: 300px;
-    height: 400px;
-    justify-content: space-between;
-    min-width: 350px;
-}
-
-.liked img {
-    max-width: 100%;
-    max-height: 150px;
-    object-fit: contain; 
-}
-.liked p{
-    word-wrap: break-word;
-}
-.liked__hard {
-    border: 2px solid red;
 }
