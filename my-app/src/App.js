@@ -9,7 +9,9 @@ import {Routes,
     Route,
     BrowserRouter as Router} from 'react-router-dom';
 import Home from './pages/Home.jsx';
-import WearListApi from './components/wears/WearListApi.jsx';
+import SpaceXApi from './components/courseList/SpaceXApi.jsx';
+import WearListApi from './components/courseList/WearListApi.jsx';
+
 
 
 function App() {
@@ -25,6 +27,7 @@ function App() {
                 <Route path='/error' element={<Error/>}></Route>
                 <Route path='/productlistapi' element={<ProductListApi/>}></Route>
                 <Route path='/wearlistapi' element={<WearListApi/>}></Route>
+                <Route path='/spacexapi' element={<SpaceXApi/>}></Route>
             </Routes>
             <Footer></Footer>
         </div>

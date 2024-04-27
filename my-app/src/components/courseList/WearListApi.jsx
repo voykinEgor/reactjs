@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
 import styles from "./CourseList.module.scss";
-import Wear from "./Wear.jsx";
 
 const WearListApi = () =>{
-    const[wears, setWears] = useState([]);
+    const [wears, setWears] = useState([]);
     useEffect(() => {
         fetch('https://api.escuelajs.co/api/v1/products')
             .then((response) => response.json())
@@ -13,16 +12,18 @@ const WearListApi = () =>{
                 setWears(json);
             });
     },[])
+
     return (
         <>
-            <h1>Wears from Api</h1>
+            <h1>Data from WearList API</h1>
             <div className={styles.mainblock}>
-                <div className={styles.wear}>
-                    {wears.map((item)=>
-                        <div key={item.id}>
+                <div className={styles.list}>
+                    {wears.slice(0,10).map((item)=>
+                        <div key={item.id} className={styles.wears}>
                             {/* <Course course={item} deleteCourse={deleteCourse}/> */}
                             <h3>{item.title}</h3>
-                            <p>{item.price}$</p>
+                            <img src={item.images[0]} alt="wearimage"></img>
+                            <h3>Price: {item.price}$</h3>
                         </div>
                     )}
                 </div>

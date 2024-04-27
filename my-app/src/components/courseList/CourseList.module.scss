@@ -4,7 +4,34 @@
     flex-direction: row;
     flex-wrap: wrap;
 }
-
+.spacex{
+    border: 2px solid gray;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    max-width: 300px;
+    height: 200px;
+    justify-content: space-between;
+    min-width: 350px;
+    
+}
+.wears{
+    border: 2px solid gray;
+    margin: 5px;
+    display: inline-block;
+    flex-direction: column;
+    padding: 5px;
+    max-width: 300px;
+    height: 500px;
+    justify-content: space-between;
+    min-width: 440px;
+    text-wrap: nowrap;
+    & img{
+        max-width: 390px;
+        // object-fit: contain; 
+    }
+}
 .mainblock{
     min-height: 40vh;
 }
