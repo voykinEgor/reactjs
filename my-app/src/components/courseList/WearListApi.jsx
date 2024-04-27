@@ -21,8 +21,8 @@ const WearListApi = () =>{
                     {wears.slice(0,10).map((item)=>
                         <div key={item.id} className={styles.wears}>
                             {/* <Course course={item} deleteCourse={deleteCourse}/> */}
-                            <h3>{item.title}</h3>
                             <img src={item.images[0]} alt="wearimage"></img>
+                            <h3>{item.title}</h3>
                             <h3>Price: {item.price}$</h3>
                         </div>
                     )}
