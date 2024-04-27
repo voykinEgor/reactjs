@@ -9,6 +9,7 @@ import {Routes,
     Route,
     BrowserRouter as Router} from 'react-router-dom';
 import Home from './pages/Home.jsx';
+import WearListApi from './components/wears/WearListApi.jsx';
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
                 <Route path='/about' element={<About/>}></Route>
                 <Route path='/error' element={<Error/>}></Route>
                 <Route path='/productlistapi' element={<ProductListApi/>}></Route>
+                <Route path='/wearlistapi' element={<WearListApi/>}></Route>
             </Routes>
             <Footer></Footer>
         </div>
