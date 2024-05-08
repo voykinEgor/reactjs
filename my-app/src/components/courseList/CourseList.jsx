@@ -4,6 +4,7 @@ import data from "../../data.json";
 import { useEffect, useState } from "react";
 
 
+
 const CourseList = () => {
     // console.log(data);
     const [counter, setCounter] = useState(0);
