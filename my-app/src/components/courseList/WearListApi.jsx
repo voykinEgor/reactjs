@@ -47,7 +47,7 @@ const WearListApi = () =>{
     },[])
 
     useEffect(()=>{
-        const t = wears.filter(item=> item.title.includes(textFilter))
+        const t = wears.filter(item => item.title.includes(textFilter))
         setFilteredWear(t);
     },[textFilter])
 

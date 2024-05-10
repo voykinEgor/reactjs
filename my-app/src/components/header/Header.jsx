@@ -13,7 +13,6 @@ const Header = () => {
                 <a href="/">Home</a>
                 <a href="/catalog">Catalog</a>
                 <a href="/about">About</a>
-                <a href="/error">Error</a>
                 <a href="/productlistapi">Api</a>
                 <a href="/wearlistapi">Wears Api</a>
                 <a href="/spacexapi">SpaceX Api</a>
