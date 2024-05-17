@@ -70,7 +70,7 @@ const WearListApi = () =>{
                         wears.map((item)=>(
                             <card key={item.id} className={styles.wears}>
                                 <CardMedia
-                                    sx={{ height: 350 }}
+                                    sx={{ height: 350}}
                                     image={item.images[0]}
                                     title="wearimage"
                                 />
