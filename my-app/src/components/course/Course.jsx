@@ -1,29 +1,41 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "./Course.module.scss";
 
-const Course = (props) =>{
-    const {course, deleteCourse} = props;
-    const [visibleLike, setvisibleLike] = useState(false);
+const Course = (props) => {
+    const { course, deleteCourse } = props;
+    const [liked, setLiked] = useState(() => {
+        // Инициализация состояния liked из localStorage
+        const savedLiked = localStorage.getItem(`liked-${course.id}`);
+        return savedLiked ? JSON.parse(savedLiked) : false;
+    });
 
-    const hendlevisibleLike = () =>{
-        setvisibleLike(!visibleLike);
-    }
+    useEffect(() => {
+        // Сохранение состояния liked в localStorage
+        localStorage.setItem(`liked-${course.id}`, JSON.stringify(liked));
+    }, [liked]);
 
-    const hendleDelete = (id) => {
+    const handleVisibleLike = () => {
+        setLiked(!liked);
+    };
+
+    const handleDelete = (id) => {
         deleteCourse(id);
-    }
+    };
 
-    // let liked_style = visibleLike ? styles.liked: styles.item;
     return (
-        <div className={`${styles.item} ${visibleLike ? styles.liked:''}`}>
+        <div className={`${styles.item} ${liked ? styles.liked : ''}`}>
             <h3>{course.tittle}</h3>
-                <img src={course.img}></img>
-                <p>Description: {course.description}</p>
-                {course.hours > 130 ? <p className={styles.item__hard}>Hours: {course.hours}</p>: <p>Hours: {course.hours}</p>}
-                <button onClick={()=>hendleDelete(course.id)}>Remove</button>            
-                <button onClick={hendlevisibleLike}>Like</button>            
+            <img src={course.img} alt={course.tittle}></img>
+            <p>Description: {course.description}</p>
+            {course.hours > 130 ? (
+                <p className={styles.item__hard}>Hours: {course.hours}</p>
+            ) : (
+                <p>Hours: {course.hours}</p>
+            )}
+            <button onClick={() => handleDelete(course.id)}>Remove</button>
+            <button onClick={handleVisibleLike}>Like</button>
         </div>
-    )
-}
+    );
+};
 
 export default Course;

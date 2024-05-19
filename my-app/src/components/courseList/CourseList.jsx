@@ -1,51 +1,62 @@
+import { useEffect, useState } from "react";
 import Course from "../course/Course";
 import styles from "./CourseList.module.scss";
 import data from "../../data.json";
-import { useEffect, useState } from "react";
-
-
 
 const CourseList = () => {
-    // console.log(data);
-    const [counter, setCounter] = useState(0);
-    
-    const handleCounter = () =>{
-        setCounter(counter + 1);
-    }
-
-    const handleVisible = () =>{
-        setVisibleCount(visibleCount + 1);
-    }
-
     const [visibleCount, setVisibleCount] = useState(2);
     const [courses, setCourses] = useState([]);
-    useEffect(()=>{
+    const [filter, setFilter] = useState("all"); // Новый фильтр состояния
+
+    useEffect(() => {
         setCourses(data);
-    },[]) //заполнение списка только при загрузке сайта, если [] пустые, если [id], то меняется при изменении поля
+    }, []);
 
-    const deleteCourse = (id) =>{
-        const updateCourses = courses.filter((item) => item.id != id);
-        setCourses(updateCourses);
-    }
+    const deleteCourse = (id) => {
+        const updatedCourses = courses.filter((item) => item.id !== id);
+        setCourses(updatedCourses);
+    };
 
+    const handleVisible = () => {
+        setVisibleCount(visibleCount + 1);
+    };
 
+    const handleOnlyLiked = () => {
+        setFilter("liked");
+    };
 
+    const handleAll = () => {
+        setFilter("all");
+    };
 
-    return(
+    const filteredCourses = courses.filter((course) => {
+        if (filter === "liked") {
+            const liked = localStorage.getItem(`liked-${course.id}`);
+            return liked && JSON.parse(liked);
+        }
+        return true;
+    });
+
+    return (
         <div className={styles.mainblock}>
             <div className={styles.list}>
-                {courses.slice(0,visibleCount).map((item)=>
+                {filteredCourses.slice(0, visibleCount).map((item) => (
                     <div key={item.id}>
-                        <Course course={item} deleteCourse={deleteCourse}/>
+                        <Course course={item} deleteCourse={deleteCourse} />
                     </div>
-                )}
+                ))}
             </div>
-                    {visibleCount < courses.length && (
-                        <button className={styles.buttonmore} onClick={handleVisible}>More {visibleCount}</button>
-                    )}
+            {visibleCount < filteredCourses.length && (
+                <button className={styles.buttonmore} onClick={handleVisible}>
+                    More {visibleCount}
+                </button>
+            )}
+            <div className={styles.filterButtons}>
+                <button onClick={handleOnlyLiked}>OnlyLiked</button>
+                <button onClick={handleAll}>All</button>
+            </div>
         </div>
-        
-    )
-}
+    );
+};
 
 export default CourseList;
