@@ -4,13 +4,11 @@ import styles from "./Course.module.scss";
 const Course = (props) => {
     const { course, deleteCourse } = props;
     const [liked, setLiked] = useState(() => {
-        // Инициализация состояния liked из localStorage
         const savedLiked = localStorage.getItem(`liked-${course.id}`);
         return savedLiked ? JSON.parse(savedLiked) : false;
     });
 
     useEffect(() => {
-        // Сохранение состояния liked в localStorage
         localStorage.setItem(`liked-${course.id}`, JSON.stringify(liked));
     }, [liked]);
 

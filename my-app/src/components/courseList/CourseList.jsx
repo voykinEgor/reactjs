@@ -6,7 +6,7 @@ import data from "../../data.json";
 const CourseList = () => {
     const [visibleCount, setVisibleCount] = useState(2);
     const [courses, setCourses] = useState([]);
-    const [filter, setFilter] = useState("all"); // Новый фильтр состояния
+    const [filter, setFilter] = useState("all"); 
 
     useEffect(() => {
         setCourses(data);
